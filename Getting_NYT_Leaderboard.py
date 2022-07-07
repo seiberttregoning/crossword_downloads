@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup as soup
 import csv
 import requests
@@ -52,8 +52,14 @@ def get_mini_times(cookie, output):
         if name in players:
             if time == '--':
                 time = ''
+                seconds = ''
+            else:
+                t = datetime.strptime(time, "%M:%S")
+                delta = timedelta(
+                    hours=t.hour, minutes=t.minute, seconds=t.second)
+                seconds = round(delta.total_seconds())
             daytimes.append(
-                [month, day, year, f'{month}-{day}-{year}', name, time])
+                [month, day, year, f'{month}-{day}-{year}', name, time, seconds])
     with open(output, 'a', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerows(daytimes)
