@@ -66,4 +66,4 @@ def get_mini_times(cookie, output):
 
 
 get_mini_times(
-    cookie, 'C:/Users/georg/Documents/crossword_downloads/downloaded_data/mini_data.csv')
+    cookie, 'mini_data.csv')
