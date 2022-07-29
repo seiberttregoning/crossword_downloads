@@ -13,8 +13,8 @@ password = ''
 
 players = ['Seibert', 'dirk orozco', 'Joshtreg', 'E-thousand']
 
-cookie = '1wT98sJ6Z.TQWGqLaQm/UCQfWfGwUKzsghR5aiP1VEk2TLcF7cuDlOzfWWEXaKhcr9jOoea6bgYnTRJrSncMhw2RG/C/YkHmkfYETjT/wyL2nqX97jNsFJvzxDTQO38FS1^^^^CBISKQjf4ZaWBhDq45aWBhoSMS2G3oJwdMrBJ-VV9bJKx5p3IOSVySgqAgACGkBwSQkE69EtlZTe3J4LMgD_2pUhasKj6NjFyHVuLoQuk6Xt97n0n7rVzcvvU-gjN9xc05ucVSSVbT1irriAaNgB'
-
+with open('cookie.txt') as f:
+    cookie = f.readlines()[0]
 # Cookie manually added
 
 # def login(username, password):
