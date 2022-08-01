@@ -13,7 +13,7 @@ password = ''
 
 players = ['Seibert', 'dirk orozco', 'Joshtreg', 'E-thousand']
 
-with open('cookie.txt') as f:
+with open(r'C:\Users\georg\Documents\crossword_downloads\cookie.txt') as f:
     cookie = f.readlines()[0]
 
 # Cookie manually added
